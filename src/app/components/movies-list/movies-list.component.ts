@@ -12,13 +12,7 @@ export class MoviesListComponent implements OnInit {
 
   constructor(public MovieService:MovieService) { }
 
-  ngOnInit() {
-    this.MovieService.getMovies()
-    .subscribe(
-      res => this.showMovies = res,
-      error => console.error(error),
-      () => console.log(this.showMovies)
-    )
+  ngOnInit(): void {
   }
 
 }

@@ -20,5 +20,10 @@ export class SearchComponent implements OnInit {
       () => console.log(this.showMovies)
     )
   }
+  searchTitle(event){
+    if(event.target.value.length >= 3){
+      this.MovieService.searchMovieByTitle(event.target.value).subscribe(res=>this.MovieService.setMovie(res))
+    }
+  }
 
 }

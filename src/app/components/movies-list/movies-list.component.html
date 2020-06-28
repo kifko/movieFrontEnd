@@ -1,1 +1,13 @@
-<p>movies-list works!</p>
+<div class="movies">
+    <div class="movie" *ngFor="let pelicula of showMovies">
+        <a routerLink="/info" routerLinkActive="active-link">
+            <img width="200"height="288" (click)="MovieService.locateMovies(pelicula)"
+            src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}"
+            alt="poster">
+        </a>
+    </div>
+</div>
+
+<a routerLink="" routerLinkActive="active-link">
+    <button>Welcome</button>
+</a>

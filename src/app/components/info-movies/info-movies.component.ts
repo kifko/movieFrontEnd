@@ -13,7 +13,7 @@ export class InfoMoviesComponent implements OnInit {
   constructor(private MovieService:MovieService) { }
 
   ngOnInit(): void {
-    this.movieShow = this.MovieService.movieSelected;
+    this.movieShow = this.MovieService.filmChoosed;
   }
 
 }
